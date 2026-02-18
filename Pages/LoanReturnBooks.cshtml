@@ -1,0 +1,41 @@
+﻿@page
+@model WebApplicationTargil2.Pages.LoanReturnBooksModel
+@{
+    ViewData["Title"] = "Loan and Return Books";
+}
+
+<h3>Loan Books</h3>
+<form method="post" asp-page-handler="Loan">
+    <div>
+        <label asp-for="LoanSubscriberId">Subscriber ID:</label>
+        <input asp-for="LoanSubscriberId" type="number" min="0" />
+    </div>
+    <div>
+        <label asp-for="LoanBookId">Book ID:</label>
+        <input asp-for="LoanBookId" type="number" min="0" />
+    </div>
+    <button type="submit">Loan Book</button>
+</form>
+@if (!string.IsNullOrEmpty(Model.LoanMessage))
+{
+    <p>@Model.LoanMessage</p>
+}
+<br />
+<br />
+
+<h3>Return Books</h3>
+<form method="post" asp-page-handler="Return">
+    <div>
+        <label asp-for="ReturnSubscriberId">Subscriber ID:</label>
+        <input asp-for="ReturnSubscriberId" type="number" min="0" />
+    </div>
+    <div>
+        <label asp-for="ReturnBookId">Book ID:</label>
+        <input asp-for="ReturnBookId" type="number" min="0" />
+    </div>
+    <button type="submit">Return Book</button>
+</form>
+@if (!string.IsNullOrEmpty(Model.ReturnMessage))
+{
+    <p>@Model.ReturnMessage</p>
+}

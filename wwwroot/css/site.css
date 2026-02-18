@@ -1,0 +1,82 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.index-header {
+    color: hotpink;
+    font-weight: bold;
+}
+
+button {
+    border-radius: 10px; /* roundness */
+    border: 2px solid black;
+    padding: 10px 10px; 
+    background-color: white; 
+    color: black; /* Text color */
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: pink; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 85%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    form label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    form button {
+        width: 250px;
+    }

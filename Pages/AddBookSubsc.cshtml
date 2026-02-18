@@ -1,0 +1,54 @@
+﻿@page
+@model WebApplicationTargil2.Pages.AddBookSubscModel
+@{
+    ViewData["Title"] = "Add Book and Subscriber";
+}
+
+<h3>Add Book</h3>
+<form method="post" asp-page-handler="AddBook">
+    <div>
+        <label asp-for="Book.bookID">Book ID:</label>
+        <input asp-for="Book.bookID" type="number" min="0" />
+    </div>
+    <div>
+        <label asp-for="Book.bookName">Book Name:</label>
+        <input asp-for="Book.bookName" />
+    </div>
+    <div>
+        <label asp-for="Book.bookAuthors">Book Authors:</label>
+        <input asp-for="Book.bookAuthors" />
+    </div>
+    <div>
+        <label asp-for="Book.bookGenre">Book Genre:</label>
+        <input asp-for="Book.bookGenre" />
+    </div>
+    <button type="submit">Add Book</button>
+</form>
+
+@if (Model.BookMessage != null)
+{
+    <p>@Model.BookMessage</p>
+}
+<br />
+<br />
+<h3>Add Subscriber</h3>
+<form method="post" asp-page-handler="AddSubscriber">
+    <div>
+        <label asp-for="Subscriber.subscriberID">Subscriber ID:</label>
+        <input asp-for="Subscriber.subscriberID" type="number" min="0" />
+    </div>
+    <div>
+        <label asp-for="Subscriber.firstName">First Name:</label>
+        <input asp-for="Subscriber.firstName" />
+    </div>
+    <div>
+        <label asp-for="Subscriber.lastName">Last Name:</label>
+        <input asp-for="Subscriber.lastName" />
+    </div>
+    <button type="submit">Add Subscriber</button>
+</form>
+
+@if (Model.SubscriberMessage != null)
+{
+    <p>@Model.SubscriberMessage</p>
+}
